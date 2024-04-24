@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Todo app</title>
+</head>
+
+<body>
+
+  <section class="todoList-section">
+    <div class="todoList-container">
+      <div class="todoList-header-container">
+
+        <h1 class="todoList-title">T O D O</h1>
+
+
+        <img src="./images/icon-sun.svg" class="todoList-themeBtn" light-Btn onclick="changeTheme()" />
+
+      </div>
+
+      <div class="todoList-inputs-container">
+        <div class="todoList-item-radio inputRadio" onclick="addItemtoList(event)"> + </div>
+        <input type="text" id="todoListInput" class="todoList-input" value="" onkeyup="inputPressKey(event)"
+          placeholder="Create a new todo.." />
+
+      </div>
+
+      <div class="todoList-listContainer">
+        <ul class="todoList-ul">
+
+
+        </ul>
+      </div>
+
+      <div class="todoList-footer">
+        <div class="todoList-itemCount">0 items left</div>
+
+        <div class="todoList-selectType">
+          <div class="todoList-Type activeType" onclick="setTypes(event)">All</div>
+          <div class="todoList-Type" onclick="setTypes(event)">Active</div>
+          <div class="todoList-Type" onclick="setTypes(event)">Completed</div>
+        </div>
+
+        <div class="todoList-clearCompleted" onclick="clearComleted()">Clear Completed</div>
+      </div>
+
+      <div class="extra-selectType-footer">
+        <div class="todoList-Type activeType" onclick="setTypes(event)">All</div>
+        <div class="todoList-Type" onclick="setTypes(event)">Active</div>
+        <div class="todoList-Type" onclick="setTypes(event)">Completed</div>
+      </div>
+
+      <div class="app-message">Drag and drop to orderlist</div>
+    </div>
+  </section>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
